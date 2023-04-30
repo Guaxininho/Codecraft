@@ -1,26 +1,27 @@
+@import "./cores";
+
 *,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
-
 body {
-    box-sizing: border-box;
-    background-color: #212529;
-    font-family: "Noto Sans Miao", sans-serif;
+  box-sizing: border-box;
+  background-color: $cor-de-fundo;
+  font-family: "Noto Sans Miao", sans-serif;
 }
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 a,
 a:active {
-    color: rgb(69, 128, 106);
-    text-decoration: none;
+  color: rgb(69, 128, 106);
+  text-decoration: none;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Miao&display=swap");
