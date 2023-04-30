@@ -10,16 +10,23 @@
 
   <body>
     <header>
-      <div id="flexLogo">
-        <img src="./Imagens/logo.png" />
-        <h1>CodeCraft</h1>
-      </div>
-      <button id="post">
-        <img src="./Imagens/mais.png" /><span>Novo post</span>
-      </button>
+      <div id="barraNav">
+        <div id="flexLogo">
+          <img src="./Imagens/logo.png" />
+          <h1>CodeCraft</h1>
+        </div>
+        <button id="post">
+          <img src="./Imagens/mais.png" /><span>Novo post</span>
+        </button>
+      </div>     
       <!-- Barra de pesquisa aqui embaixo -->
-      <div id="flexPesquisa">
-        <input type="text" />
+      <div class="pesquisaBox" id="flexPesquisa">
+        <input class="pesquisaInput" type="text" name="" placeholder="Pesquisa" />
+        <button class="botaoPesquisa" href="#">
+          <i class="material-icons">
+            <img src="./Imagens/pesquisa.png"/>
+          </i>
+        </button>
       </div>
       <!-- fim da barra de pesquisa -->
     </header>

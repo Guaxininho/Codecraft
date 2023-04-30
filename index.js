@@ -164,3 +164,15 @@ novoPost.addEventListener("click", () => {
 });
 
 // Criar formulário para ser preenchido e dentro dele quando conferido todos os campos e der ok, chamar a função pra postar tudo isso na API (enviandodados()) e chamar no final a função para ler a API (buscandodados())
+
+
+// pesquisa
+
+const botaoPesquisa = document.querySelector(".botaoPesquisa");
+const pesquisaInput = document.querySelector(".pesquisaInput");
+
+botaoPesquisa.addEventListener("mouseover", () =>{
+  pesquisaInput.style.padding = "0 .7rem"
+  pesquisaInput.style.border = "1px solid transparent";
+  pesquisaInput.style.width = "200px";
+})
