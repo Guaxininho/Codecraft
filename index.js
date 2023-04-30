@@ -1,41 +1,22 @@
 const titulo = document.querySelectorAll(".titulo");
 const descricao = document.querySelectorAll(".descricao");
 const codigo = document.querySelectorAll(".codigo");
-const tags = document.querySelectorAll(".tag");
 const linguagem = document.querySelectorAll(".linguagem");
 const tipo = document.querySelectorAll(".tipo");
 const main = document.querySelector("#main");
-
-// Tags
-for (let i = 0; i < tags.length; i++) {
-  // Linguagens
-  if (tags[i].textContent === "PHP") {
-    tags[i].style.backgroundColor = "#9c36b5";
-  }
-
-  // Tipo do dado
-  if (tags[i].textContent === "Syntaxe") {
-    tags[i].style.backgroundColor = "#6741d9";
-  }
-  if (tags[i].textContent === "Regra") {
-    tags[i].style.backgroundColor = "#3b5bdb";
-  }
-  if (tags[i].textContent === "Ferramenta") {
-    tags[i].style.backgroundColor = "#0c8599";
-  }
-  if (tags[i].textContent === "Estrutura") {
-    tags[i].style.backgroundColor = "#099268";
-  }
-}
+const novoPost = document.querySelector("#post");
 
 async function enviandoDados() {
   const dado = {
-    titulo: "Michiko aprendendo",
-    descricao: "Aqui é onde a michiko vai entender como funciona",
-    codigo: "teste",
-    link: "teste",
+    titulo: "Teste de funcionamento",
+    descricao: "Só um teste para ver se tudo está funcionando",
+    codigo: "<h1> Hello world! </h1>",
+    link1: "http://www.instagram.com",
+    link2: "http://www.google.com",
     categoria1: "PHP",
     categoria2: "Estrutura",
+    nomelink1: "Instagram",
+    nomelink2: "Google",
   };
   const res = await fetch(
     "https://njdgryzqvrufijxtomch.supabase.co/rest/v1/MainCards",
@@ -92,54 +73,94 @@ async function buscandoDados() {
         </div>
       </div> */
 
-  // Criando card
-  let criandoCard = document.createElement("div");
-  criandoCard.className = "card";
-  main.appendChild(criandoCard);
+  for (let i = 0; i < data.length; i++) {
+    // Criando card
+    let criandoCard = document.createElement("div");
+    criandoCard.className = "card";
+    main.appendChild(criandoCard);
 
-  // Criando titulo
-  let criandoTitulo = document.createElement("h1");
-  criandoTitulo.className = "titulo";
-  criandoTitulo.textContent = data[0].titulo;
-  criandoCard.appendChild(criandoTitulo);
+    // Criando titulo
+    let criandoTitulo = document.createElement("h1");
+    criandoTitulo.className = "titulo";
+    criandoTitulo.textContent = data[i].titulo;
+    criandoCard.appendChild(criandoTitulo);
 
-  // Criando as tags
-  let criandoTag = document.createElement("div");
-  criandoTag.className = "flexTags";
-  criandoCard.appendChild(criandoTag);
-  let tag1 = document.createElement("figure");
-  tag1.className = "tag linguagem";
-  tag1.textContent = data[0].categoria1;
-  criandoTag.appendChild(tag1);
-  let tag2 = document.createElement("figure");
-  tag2.className = "tag tipo";
-  tag2.textContent = data[0].categoria2;
-  criandoTag.appendChild(tag2);
+    // Criando as tags
+    let criandoTag = document.createElement("div");
+    criandoTag.className = "flexTags";
+    criandoCard.appendChild(criandoTag);
+    let tag1 = document.createElement("figure");
+    tag1.className = "tag linguagem";
+    tag1.textContent = data[i].categoria1;
+    criandoTag.appendChild(tag1);
+    let tag2 = document.createElement("figure");
+    tag2.className = "tag tipo";
+    tag2.textContent = data[i].categoria2;
+    criandoTag.appendChild(tag2);
 
-  // Criando a descrição
-  let criandoDescricao = document.createElement("p");
-  criandoDescricao.className = "descricao";
-  criandoDescricao.textContent = data[0].descricao;
-  criandoCard.appendChild(criandoDescricao);
+    // Criando a descrição
+    let criandoDescricao = document.createElement("p");
+    criandoDescricao.className = "descricao";
+    criandoDescricao.textContent = data[i].descricao;
+    criandoCard.appendChild(criandoDescricao);
 
-  // Criando o código
-  let criandoCode = document.createElement("code");
-  criandoCode.className = "codigo";
-  criandoCode.textContent = data[0].codigo;
-  criandoCard.appendChild(criandoCode);
+    // Criando o código
+    let criandoCode = document.createElement("code");
+    criandoCode.className = "codigo";
+    criandoCode.textContent = data[i].codigo;
+    criandoCard.appendChild(criandoCode);
 
-  // Criando os links
-  let criandoLinks = document.createElement("div");
-  criandoLinks.className = "flexlinks";
-  criandoCard.appendChild(criandoLinks);
-  let criandoLinkInterno1 = document.createElement("a");
-  criandoLinkInterno1.className = "link";
-  criandoLinkInterno1.textContent = "Documentação";
-  criandoLinkInterno1.href = "https://www.google.com";
-  criandoLinks.appendChild(criandoLinkInterno1);
+    // Criando os links
+    let criandoLinks = document.createElement("div");
+    criandoLinks.className = "flexlinks";
+    criandoCard.appendChild(criandoLinks);
+    if (data[i].nomelink1 !== "" && data[i].link1 !== "") {
+      let criandoLinkInterno1 = document.createElement("a");
+      criandoLinkInterno1.className = "link";
+      criandoLinkInterno1.textContent = data[i].nomelink1;
+      criandoLinkInterno1.href = data[i].link1;
+      criandoLinks.appendChild(criandoLinkInterno1);
+    }
+    if (data[i].nomelink2 !== "" && data[i].link2 !== "") {
+      let criandoLinkInterno2 = document.createElement("a");
+      criandoLinkInterno2.className = "link";
+      criandoLinkInterno2.textContent = data[i].nomelink2;
+      criandoLinkInterno2.href = data[i].link2;
+      criandoLinks.appendChild(criandoLinkInterno2);
+    }
+  }
+
+  let tags = document.querySelectorAll(".tag");
+  // Tags
+  for (let i = 0; i < tags.length; i++) {
+    // Linguagens
+    if (tags[i].textContent === "PHP") {
+      tags[i].style.backgroundColor = "#9c36b5";
+    }
+
+    // Tipo do dado
+    if (tags[i].textContent === "Syntaxe") {
+      tags[i].style.backgroundColor = "#6741d9";
+    }
+    if (tags[i].textContent === "Regra") {
+      tags[i].style.backgroundColor = "#3b5bdb";
+    }
+    if (tags[i].textContent === "Ferramenta") {
+      tags[i].style.backgroundColor = "#0c8599";
+    }
+    if (tags[i].textContent === "Estrutura") {
+      tags[i].style.backgroundColor = "#099268";
+    }
+  }
 }
 
 buscandoDados();
+
 // enviandoDados();
 
-// codigo[0].textContent = "oi";
+novoPost.addEventListener("click", () => {
+  console.log("entrou");
+  // Criar aqui agora o display do formulário mostrar ou não
+});
+
+// Criar formulário para ser preenchido e dentro dele quando conferido todos os campos e der ok, chamar a função pra postar tudo isso na API (enviandodados()) e chamar no final a função para ler a API (buscandodados())
