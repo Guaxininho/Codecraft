@@ -8,13 +8,13 @@ const novoPost = document.querySelector("#post");
 
 async function enviandoDados() {
   const dado = {
-    titulo: "Teste de funcionamento",
+    titulo: "Teste 2",
     descricao: "Só um teste para ver se tudo está funcionando",
     codigo: "<h1> Hello world! </h1>",
     link1: "http://www.instagram.com",
     link2: "http://www.google.com",
     categoria1: "PHP",
-    categoria2: "Estrutura",
+    categoria2: "Syntaxe",
     nomelink1: "Instagram",
     nomelink2: "Google",
   };
