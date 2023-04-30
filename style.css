@@ -29,6 +29,12 @@ header {
   width: 90%;
   align-items: center;
   justify-content: space-between;
+  /* BARRA DE PESQUISA  */
+}
+header #barraNav {
+  display: flex;
+  justify-content: space-between;
+  min-width: 70%;
 }
 header #flexLogo {
   display: flex;
@@ -59,17 +65,38 @@ header #post span {
   font-size: 1.5rem;
   color: #f8f9fa;
 }
-header #flexPesquisa input {
-  background-color: #5e6a75;
-  border-color: transparent;
-  outline: none;
-  color: #f8f9fa;
-  border-radius: 0.5rem;
-  height: 2.5rem;
-  padding: 0rem 0.5rem;
+header .pesquisaBox {
+  height: 50px;
+  position: relative;
 }
-header #flexPesquisa button {
-  padding: 0.3rem 0.7rem;
+header .pesquisaBox .botaoPesquisa {
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #2f3640;
+  transition: 0.4s;
+  position: absolute;
+  left: 98%;
+  transform: translate(-100%, -50%);
+  top: 50%;
+  padding: 0.4rem;
+}
+header .pesquisaBox .botaoPesquisa img {
+  width: 2rem;
+}
+header .pesquisaBox .pesquisaInput {
+  background: none;
+  outline: none;
+  padding: 0;
+  color: white;
+  font-size: 16px;
+  transition: 0.4s;
+  height: 100%;
+  width: 0px;
+  border: none;
+  border-radius: 40px;
+  background: #5e6a75;
 }
 
 .card {
