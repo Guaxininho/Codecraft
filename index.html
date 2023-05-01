@@ -15,84 +15,67 @@
           <img src="./Imagens/logo.png" />
           <h1>CodeCraft</h1>
         </div>
-        <button id="post">
-          <img src="./Imagens/mais.png" /><span>Novo post</span>
-        </button>
-      </div>     
+      </div>
+      <button id="post">
+        <img src="./Imagens/mais.png" /><span>Novo post</span>
+      </button>
       <!-- Barra de pesquisa aqui embaixo -->
       <div class="pesquisaBox" id="flexPesquisa">
-        <input class="pesquisaInput" type="text" name="" placeholder="Pesquisa" />
+        <input
+          class="pesquisaInput"
+          type="text"
+          name=""
+          placeholder="Pesquisa"
+        />
         <button class="botaoPesquisa" href="#">
           <i class="material-icons">
-            <img src="./Imagens/pesquisa.png"/>
+            <img src="./Imagens/pesquisa.png" />
           </i>
         </button>
       </div>
       <!-- fim da barra de pesquisa -->
-      <form>
-        <div>
-          <label for="formTitulo">Título</label>
-          <input id="formTitulo" type="text" />
-        </div>
-
-        <div>
-          <label for="formDescricao">Descrição</label>
-          <input id="formDescricao" type="text" />
-        </div>
-
-        <div>
-          <label for="formCodigo">Código de exemplo</label>
-          <input id="formCodigo" type="text" />
-        </div>
-
-        <div>
-          <label for="formLinguagem">Linguagem ou Tecnologia</label>
-          <select name="Linguagem" id="formLinguagem">
-            <option value="PHP">PHP</option>
-            <option value="Regex">Regex</option>
-          </select>
-        </div>
-
-        <div>
-          <label for="formTipo">Tipo de informação</label>
-          <select name="TipoDeDado" id="formTipo">
-            <option value="Syntaxe">Syntaxe</option>
-            <option value="Regra">Regra</option>
-            <option value="Ferramenta">Ferramenta</option>
-            <option value="Estrutura">Estrutura</option>
-          </select>
-        </div>
-
-        <div>
-          <label for="formlinknome1">Nome do 1º link</label>
-          <input name="TipoDeDado" id="formlinknome1" />
-        </div>
-        <div>
-          <label for="formlink1">1º Link</label>
-          <input name="TipoDeDado" id="formLink1" />
-        </div>
-
-        <div>
-          <label for="formlink2">2º Link</label>
-          <input name="TipoDeDado" id="formLink2" />
-        </div>
-
-        <div>
-          <label for="formlinknome2">Nome do 2º link</label>
-          <input name="TipoDeDado" id="formlinknome2" />
-        </div>
-
-        <!-- titulo -->
-        <!-- descricao -->
-        <!-- codigo -->
-        <!-- categoria1 -->
-        <!-- categoria2 -->
-        <!-- link1 -->
-        <!-- link2 -->
-        <!-- nomelink1 -->
-        <!-- nomelink2 -->
-      </form>
     </header>
+    <form id="formulario">
+      <label for="formTitulo">Título</label>
+      <input id="formTitulo" type="text" />
+
+      <label for="formDescricao">Descrição</label>
+      <input id="formDescricao" type="text" />
+
+      <label for="formCodigo">Código de exemplo</label>
+      <input id="formCodigo" type="text" />
+
+      <label for="formLinguagem">Linguagem ou Tecnologia</label>
+      <select name="Linguagem" id="formLinguagem">
+        <option value="PHP">PHP</option>
+        <option value="Regex">Regex</option>
+      </select>
+
+      <label for="formTipo">Tipo de informação</label>
+      <select name="TipoDeDado" id="formTipo">
+        <option value="Syntaxe">Syntaxe</option>
+        <option value="Regra">Regra</option>
+        <option value="Ferramenta">Ferramenta</option>
+        <option value="Estrutura">Estrutura</option>
+      </select>
+
+      <div class="flexLink1">
+        <label for="formlinknome1">Nome do link</label>
+        <input name="TipoDeDado" id="formlinknome1" />
+
+        <label for="formlink1">Link</label>
+        <input name="TipoDeDado" id="formLink1" />
+      </div>
+
+      <div class="flexLink1">
+        <label for="formlinknome2">Nome do link</label>
+        <input name="TipoDeDado" id="formlinknome2" />
+        <label for="formlink2">Link</label>
+        <input name="TipoDeDado" id="formLink2" />
+      </div>
+
+      <button type="submit" id="botaoPostar">Postar</button>
+    </form>
     <main id="main"></main>
     <script src="./index.js"></script>
   </body>

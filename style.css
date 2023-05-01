@@ -24,6 +24,7 @@ a:active {
 }
 
 header {
+  position: relative;
   display: flex;
   margin: 1rem auto;
   width: 90%;
@@ -49,12 +50,17 @@ header #flexLogo h1 {
   letter-spacing: 0.1rem;
 }
 header #post {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   gap: 0.5rem;
   background-color: #308c61;
   padding: 0.5rem 0.5rem;
+  height: 4rem;
   width: 10rem;
   align-items: center;
+  align-self: center;
   border: none;
   cursor: pointer;
 }
@@ -81,6 +87,7 @@ header .pesquisaBox .botaoPesquisa {
   transform: translate(-100%, -50%);
   top: 50%;
   padding: 0.4rem;
+  border-color: transparent;
 }
 header .pesquisaBox .botaoPesquisa img {
   width: 2rem;
@@ -97,6 +104,52 @@ header .pesquisaBox .pesquisaInput {
   border: none;
   border-radius: 40px;
   background: #5e6a75;
+}
+
+#formulario {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #343a40;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+}
+#formulario select {
+  font-size: 1.7rem;
+  letter-spacing: 0.1rem;
+  padding: 0.5rem;
+}
+#formulario label {
+  font-size: 2rem;
+  color: #dcd7c9;
+}
+#formulario #formTipo {
+  margin-bottom: 1rem;
+}
+#formulario .flexLink1 {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+#formulario input {
+  margin-bottom: 0.5rem;
+  padding: 0.7rem;
+}
+#formulario #botaoPostar {
+  position: absolute;
+  top: 97%;
+  left: 97%;
+  transform: translate(-100%, -100%);
+  width: 20rem;
+  height: 5rem;
+  background-color: #308c61;
+  color: #f8f9fa;
+  border-color: transparent;
+  cursor: pointer;
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
 }
 
 .card {

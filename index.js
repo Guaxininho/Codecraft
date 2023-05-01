@@ -5,19 +5,37 @@ const linguagem = document.querySelectorAll(".linguagem");
 const tipo = document.querySelectorAll(".tipo");
 const main = document.querySelector("#main");
 const novoPost = document.querySelector("#post");
+const postar = document.querySelector("#botaoPostar");
+const formulario = document.querySelector("#formulario");
+const formLinguagem = document.querySelector("#formLinguagem");
+const formTipo = document.querySelector("#formTipo");
+
+const formTitulo = document.querySelector("#formTitulo");
+const formDescricao = document.querySelector("#formDescricao");
+const formCodigo = document.querySelector("#formCodigo");
+const formlinknome1 = document.querySelector("#formlinknome1");
+const formLink1 = document.querySelector("#formLink1");
+const formlinknome2 = document.querySelector("#formlinknome2");
+const formLink2 = document.querySelector("#formLink2");
 
 async function enviandoDados() {
-  const dado = {
-    titulo: "Teste 2",
-    descricao: "Só um teste para ver se tudo está funcionando",
-    codigo: "<h1> Hello world! </h1>",
-    link1: "http://www.instagram.com",
-    link2: "http://www.google.com",
-    categoria1: "PHP",
-    categoria2: "Syntaxe",
-    nomelink1: "Instagram",
-    nomelink2: "Google",
+  let dado = {
+    titulo: formTitulo.value,
+    descricao: formDescricao.value,
+    codigo: formCodigo.value,
+    nomelink1: formlinknome1.value,
+    link1: formLink1.value,
+    nomelink2: formlinknome2.value,
+    link2: formLink2.value,
+    categoria1: formLinguagem.value,
+    categoria2: formTipo.value,
   };
+  formTitulo.value = "";
+  formDescricao.value = "";
+  formCodigo.value = "";
+  formlinknome1.value = "";
+  formLink1.value = "";
+
   const res = await fetch(
     "https://njdgryzqvrufijxtomch.supabase.co/rest/v1/MainCards",
     {
@@ -33,6 +51,7 @@ async function enviandoDados() {
       body: JSON.stringify(dado),
     }
   );
+  location.reload();
 }
 
 // Busca os dados na API para renderizar no front e cria elementos com aqueles dados
@@ -137,6 +156,9 @@ async function buscandoDados() {
     if (tags[i].textContent === "PHP") {
       tags[i].style.backgroundColor = "#9c36b5";
     }
+    if (tags[i].textContent === "Regex") {
+      tags[i].style.backgroundColor = "#e67700";
+    }
 
     // Tipo do dado
     if (tags[i].textContent === "Syntaxe") {
@@ -165,14 +187,36 @@ novoPost.addEventListener("click", () => {
 
 // Criar formulário para ser preenchido e dentro dele quando conferido todos os campos e der ok, chamar a função pra postar tudo isso na API (enviandodados()) e chamar no final a função para ler a API (buscandodados())
 
-
-// pesquisa
+// BARRA DE PESQUISA
 
 const botaoPesquisa = document.querySelector(".botaoPesquisa");
 const pesquisaInput = document.querySelector(".pesquisaInput");
 
-botaoPesquisa.addEventListener("mouseover", () =>{
-  pesquisaInput.style.padding = "0 .7rem"
+botaoPesquisa.addEventListener("mouseover", () => {
+  pesquisaInput.style.padding = "0 .7rem";
   pesquisaInput.style.border = "1px solid transparent";
   pesquisaInput.style.width = "200px";
-})
+});
+
+botaoPesquisa.addEventListener("click", () => {
+  pesquisaInput.style.padding = "0";
+  pesquisaInput.style.border = "none";
+  pesquisaInput.style.width = "0px";
+});
+
+formulario.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  // console.log(dadoCap);
+  enviandoDados();
+});
+// BOTÃO POSTAR
+// postar.addEventListener("click", () => {
+
+// });
+
+// Fazer autenticação dos campos do formulário para tudo ser obrigatoriamente preenchido, se não for mostrar msg de erro
+
+// Adptar o site para todas as telas de largura
+
+// Colocar continuous deployment
