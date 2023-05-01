@@ -1,0 +1,50 @@
+@media (max-width: 900px) {
+  #botaoPostar {
+    position: static !important;
+    transform: none !important;
+    margin: 0 auto;
+  }
+  .nomeDoLink {
+    min-width: 12.6rem;
+  }
+
+  #formlinknome1 {
+    width: 100%;
+    margin-right: auto;
+    height: 4rem;
+  }
+  #formlinknome2 {
+    width: 100%;
+    margin-right: auto;
+    height: 4rem;
+  }
+  #formLink1 {
+    width: 40rem !important;
+    height: 4rem;
+  }
+  #formLink2 {
+    width: 40rem !important;
+    height: 4rem;
+  }
+  #post {
+    display: none !important;
+  }
+  #post2 {
+    display: block !important;
+    position: absolute;
+    top: 90%;
+    left: 94%;
+    transform: translateX(-100%);
+  }
+}
+@media (max-width: 660px) {
+  .flexLink1 {
+    flex-direction: column;
+  }
+  #formLink1 {
+    width: 100% !important;
+  }
+  #formLink2 {
+    width: 100% !important;
+  }
+}

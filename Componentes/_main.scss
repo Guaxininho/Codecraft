@@ -12,7 +12,7 @@ header {
     display: flex;
     justify-content: space-between;
     // border: 1px solid blue;
-    min-width: 70%;
+    min-width: 50%;
   }
   #flexLogo {
     display: flex;
@@ -95,11 +95,12 @@ header {
   width: 90%;
   margin: 0 auto;
   position: relative;
-  display: flex;
+  display: none;
   flex-direction: column;
   background-color: $cor-do-card;
   gap: 0.5rem;
   padding: 1rem 2rem;
+
   select {
     font-size: 1.7rem;
     letter-spacing: 0.1rem;
@@ -117,6 +118,12 @@ header {
     // border: 1px solid red;
     gap: 1rem;
     margin-bottom: 1rem;
+    #formLink1 {
+      width: 20rem;
+    }
+    #formLink2 {
+      width: 20rem;
+    }
   }
   input {
     margin-bottom: 0.5rem;
@@ -199,5 +206,17 @@ header {
       padding: 0rem 2rem;
       margin-bottom: 1rem;
     }
+  }
+}
+#post2 {
+  background-color: #308c61;
+  padding: 0.5rem 0.5rem;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  border-color: transparent;
+  display: none;
+  img {
+    height: 3rem;
   }
 }

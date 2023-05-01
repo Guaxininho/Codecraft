@@ -35,7 +35,7 @@ header {
 header #barraNav {
   display: flex;
   justify-content: space-between;
-  min-width: 70%;
+  min-width: 50%;
 }
 header #flexLogo {
   display: flex;
@@ -110,7 +110,7 @@ header .pesquisaBox .pesquisaInput {
   width: 90%;
   margin: 0 auto;
   position: relative;
-  display: flex;
+  display: none;
   flex-direction: column;
   background-color: #343a40;
   gap: 0.5rem;
@@ -132,6 +132,12 @@ header .pesquisaBox .pesquisaInput {
   display: flex;
   gap: 1rem;
   margin-bottom: 1rem;
+}
+#formulario .flexLink1 #formLink1 {
+  width: 20rem;
+}
+#formulario .flexLink1 #formLink2 {
+  width: 20rem;
 }
 #formulario input {
   margin-bottom: 0.5rem;
@@ -212,4 +218,67 @@ header .pesquisaBox .pesquisaInput {
   font-size: 1.6rem;
   padding: 0rem 2rem;
   margin-bottom: 1rem;
+}
+
+#post2 {
+  background-color: #308c61;
+  padding: 0.5rem 0.5rem;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  border-color: transparent;
+  display: none;
+}
+#post2 img {
+  height: 3rem;
+}
+
+@media (max-width: 900px) {
+  #botaoPostar {
+    position: static !important;
+    transform: none !important;
+    margin: 0 auto;
+  }
+  .nomeDoLink {
+    min-width: 12.6rem;
+  }
+  #formlinknome1 {
+    width: 100%;
+    margin-right: auto;
+    height: 4rem;
+  }
+  #formlinknome2 {
+    width: 100%;
+    margin-right: auto;
+    height: 4rem;
+  }
+  #formLink1 {
+    width: 40rem !important;
+    height: 4rem;
+  }
+  #formLink2 {
+    width: 40rem !important;
+    height: 4rem;
+  }
+  #post {
+    display: none !important;
+  }
+  #post2 {
+    display: block !important;
+    position: absolute;
+    top: 90%;
+    left: 94%;
+    transform: translateX(-100%);
+  }
+}
+@media (max-width: 660px) {
+  .flexLink1 {
+    flex-direction: column;
+  }
+  #formLink1 {
+    width: 100% !important;
+  }
+  #formLink2 {
+    width: 100% !important;
+  }
 }/*# sourceMappingURL=style.css.map */

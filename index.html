@@ -19,6 +19,7 @@
       <button id="post">
         <img src="./Imagens/mais.png" /><span>Novo post</span>
       </button>
+
       <!-- Barra de pesquisa aqui embaixo -->
       <div class="pesquisaBox" id="flexPesquisa">
         <input
@@ -60,23 +61,26 @@
       </select>
 
       <div class="flexLink1">
-        <label for="formlinknome1">Nome do link</label>
-        <input name="TipoDeDado" id="formlinknome1" />
+        <label class="nomeDoLink" for="formlinknome1">Nome do link</label>
+        <input id="formlinknome1" placeholder="Ex: Instagram" />
 
         <label for="formlink1">Link</label>
-        <input name="TipoDeDado" id="formLink1" />
+        <input id="formLink1" placeholder="Ex: http://www.instagram.com" />
       </div>
 
       <div class="flexLink1">
-        <label for="formlinknome2">Nome do link</label>
-        <input name="TipoDeDado" id="formlinknome2" />
+        <label class="nomeDoLink" for="formlinknome2">Nome do link</label>
+        <input id="formlinknome2" placeholder="Ex: Google" />
         <label for="formlink2">Link</label>
-        <input name="TipoDeDado" id="formLink2" />
+        <input id="formLink2" placeholder="http://www.google.com" />
       </div>
 
       <button type="submit" id="botaoPostar">Postar</button>
     </form>
     <main id="main"></main>
+    <button id="post2">
+      <img src="./Imagens/mais.png" />
+    </button>
     <script src="./index.js"></script>
   </body>
 </html>

@@ -5,6 +5,7 @@ const linguagem = document.querySelectorAll(".linguagem");
 const tipo = document.querySelectorAll(".tipo");
 const main = document.querySelector("#main");
 const novoPost = document.querySelector("#post");
+const post2 = document.querySelector("#post2");
 const postar = document.querySelector("#botaoPostar");
 const formulario = document.querySelector("#formulario");
 const formLinguagem = document.querySelector("#formLinguagem");
@@ -198,25 +199,39 @@ botaoPesquisa.addEventListener("mouseover", () => {
   pesquisaInput.style.width = "200px";
 });
 
-botaoPesquisa.addEventListener("click", () => {
-  pesquisaInput.style.padding = "0";
-  pesquisaInput.style.border = "none";
-  pesquisaInput.style.width = "0px";
-});
+// botaoPesquisa.addEventListener("click", () => {
+//   pesquisaInput.style.padding = "0";
+//   pesquisaInput.style.border = "none";
+//   pesquisaInput.style.width = "0px";
+// });
 
 formulario.addEventListener("submit", (e) => {
   e.preventDefault();
-
-  // console.log(dadoCap);
-  enviandoDados();
+  if (
+    formTitulo.value === "" ||
+    formCodigo.value === "" ||
+    formDescricao.value === ""
+  ) {
+    alert("Por favor preencha os campos corretamente");
+  } else {
+    enviandoDados();
+  }
 });
-// BOTÃO POSTAR
-// postar.addEventListener("click", () => {
 
-// });
+novoPost.addEventListener("click", () => {
+  if (formulario.style.display === "flex") {
+    formulario.style.display = "none";
+  } else {
+    formulario.style.display = "flex";
+  }
+});
 
-// Fazer autenticação dos campos do formulário para tudo ser obrigatoriamente preenchido, se não for mostrar msg de erro
+post2.addEventListener("click", () => {
+  if (formulario.style.display === "flex") {
+    formulario.style.display = "none";
+  } else {
+    formulario.style.display = "flex";
+  }
+});
 
 // Adptar o site para todas as telas de largura
-
-// Colocar continuous deployment
