@@ -177,7 +177,7 @@ async function buscandoDados() {
   }
   let testezao = document.querySelectorAll(".card");
   // console.log(testezao[0].childNodes[0].textContent);
-  botaoPesquisa.addEventListener("click", () => {
+  pesquisaInput.addEventListener("input", () => {
     let procura = pesquisaInput.value.toLowerCase();
     let titulos = [];
     let listaTitulosCard = [];
@@ -190,15 +190,26 @@ async function buscandoDados() {
     let sobra = titulos.filter((valor) => !result.includes(valor));
     // console.log(titulos);
     console.log(result);
-    // console.log(sobra);
+    console.log(sobra);
+    console.log(testezao);
+
     for (let i = 0; i < testezao.length; i++) {
-      if (testezao[i].childNodes[0].textContent.includes(sobra)) {
+      let titulo = testezao[i].childNodes[0].textContent.toLowerCase();
+      if (procura === "" || titulo.includes(procura)) {
+        testezao[i].style.display = "flex";
+      } else {
         testezao[i].style.display = "none";
       }
-      if (procura == "") {
-        testezao[i].style.display = "flex";
-      }
     }
+
+    // for (let i = 0; i < testezao.length; i++) {
+    //   if (testezao[i].childNodes[0].textContent.includes(sobra)) {
+    //     testezao[i].style.display = "none";
+    //   }
+    //   if (procura == "") {
+    //     testezao[i].style.display = "flex";
+    //   }
+    // }
   });
 }
 
