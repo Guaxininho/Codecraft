@@ -175,6 +175,42 @@ async function buscandoDados() {
       tags[i].style.backgroundColor = "#099268";
     }
   }
+  let testezao = document.querySelectorAll(".card");
+  // console.log(testezao[0].childNodes[0].textContent);
+  pesquisaInput.addEventListener("input", () => {
+    let procura = pesquisaInput.value.toLowerCase();
+    let titulos = [];
+    let listaTitulosCard = [];
+    for (let i = 0; i < testezao.length; i++) {
+      titulos.push(testezao[i].childNodes[0].textContent);
+    }
+    let result = titulos.filter((titulos) =>
+      titulos.toLowerCase().includes(procura)
+    );
+    let sobra = titulos.filter((valor) => !result.includes(valor));
+    // console.log(titulos);
+    console.log(result);
+    console.log(sobra);
+    console.log(testezao);
+
+    for (let i = 0; i < testezao.length; i++) {
+      let titulo = testezao[i].childNodes[0].textContent.toLowerCase();
+      if (procura === "" || titulo.includes(procura)) {
+        testezao[i].style.display = "flex";
+      } else {
+        testezao[i].style.display = "none";
+      }
+    }
+
+    // for (let i = 0; i < testezao.length; i++) {
+    //   if (testezao[i].childNodes[0].textContent.includes(sobra)) {
+    //     testezao[i].style.display = "none";
+    //   }
+    //   if (procura == "") {
+    //     testezao[i].style.display = "flex";
+    //   }
+    // }
+  });
 }
 
 buscandoDados();
