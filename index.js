@@ -125,7 +125,7 @@ async function buscandoDados() {
     criandoCard.appendChild(criandoDescricao);
 
     // Criando o código
-    let criandoCode = document.createElement("code");
+    let criandoCode = document.createElement("pre");
     criandoCode.className = "codigo";
     criandoCode.textContent = data[i].codigo;
     criandoCard.appendChild(criandoCode);

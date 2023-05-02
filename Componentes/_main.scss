@@ -196,6 +196,7 @@ header {
     padding: 1rem 1rem;
     margin-left: 2rem;
     margin-bottom: 1rem;
+    line-height: 2.5rem;
   }
   .flexlinks {
     display: flex;
@@ -219,4 +220,9 @@ header {
   img {
     height: 3rem;
   }
+}
+
+textarea {
+  resize: none;
+  font-size: 1.7rem;
 }

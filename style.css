@@ -208,6 +208,7 @@ header .pesquisaBox .pesquisaInput {
   padding: 1rem 1rem;
   margin-left: 2rem;
   margin-bottom: 1rem;
+  line-height: 2.5rem;
 }
 .card .flexlinks {
   display: flex;
@@ -233,6 +234,11 @@ header .pesquisaBox .pesquisaInput {
   height: 3rem;
 }
 
+textarea {
+  resize: none;
+  font-size: 1.7rem;
+}
+
 @media (max-width: 900px) {
   #botaoPostar {
     position: static !important;
@@ -251,6 +257,15 @@ header .pesquisaBox .pesquisaInput {
     width: 100%;
     margin-right: auto;
     height: 4rem;
+  }
+  .titulo {
+    text-align: start !important;
+    padding: 0 2rem;
+  }
+  .flexTags {
+    position: static !important;
+    transform: none !important;
+    padding: 0 2rem;
   }
   #formLink1 {
     width: 40rem !important;

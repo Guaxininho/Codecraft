@@ -18,6 +18,15 @@
     margin-right: auto;
     height: 4rem;
   }
+  .titulo {
+    text-align: start !important;
+    padding: 0 2rem;
+  }
+  .flexTags {
+    position: static !important;
+    transform: none !important;
+    padding: 0 2rem;
+  }
   #formLink1 {
     width: 40rem !important;
     height: 4rem;
