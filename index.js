@@ -160,6 +160,9 @@ async function buscandoDados() {
     if (tags[i].textContent === "Regex") {
       tags[i].style.backgroundColor = "#e67700";
     }
+    if (tags[i].textContent === "Javascript") {
+      tags[i].style.backgroundColor = "#fcc419";
+    }
 
     // Tipo do dado
     if (tags[i].textContent === "Syntaxe") {
@@ -173,6 +176,9 @@ async function buscandoDados() {
     }
     if (tags[i].textContent === "Estrutura") {
       tags[i].style.backgroundColor = "#099268";
+    }
+    if (tags[i].textContent === "Método") {
+      tags[i].style.backgroundColor = "#f03e3e";
     }
   }
   let testezao = document.querySelectorAll(".card");
