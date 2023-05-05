@@ -163,6 +163,9 @@ async function buscandoDados() {
     if (tags[i].textContent === "Javascript") {
       tags[i].style.backgroundColor = "#fcc419";
     }
+    if (tags[i].textContent === "Linux") {
+      tags[i].style.backgroundColor = "#9384D1";
+    }
 
     // Tipo do dado
     if (tags[i].textContent === "Syntaxe") {
