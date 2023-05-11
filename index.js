@@ -166,6 +166,9 @@ async function buscandoDados() {
     if (tags[i].textContent === "Linux") {
       tags[i].style.backgroundColor = "#9384D1";
     }
+    if (tags[i].textContent === "MySQL") {
+      tags[i].style.backgroundColor = "#FFD95A";
+    }
 
     // Tipo do dado
     if (tags[i].textContent === "Syntaxe") {
@@ -182,6 +185,9 @@ async function buscandoDados() {
     }
     if (tags[i].textContent === "Método") {
       tags[i].style.backgroundColor = "#f03e3e";
+    }
+    if (tags[i].textContent === "Segurança") {
+      tags[i].style.backgroundColor = "#D4ADFC";
     }
   }
   let testezao = document.querySelectorAll(".card");
