@@ -187,7 +187,7 @@ async function buscandoDados() {
       tags[i].style.backgroundColor = "#f03e3e";
     }
     if (tags[i].textContent === "Segurança") {
-      tags[i].style.backgroundColor = "#D4ADFC";
+      tags[i].style.backgroundColor = "#37306B";
     }
   }
   let testezao = document.querySelectorAll(".card");
