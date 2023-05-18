@@ -161,13 +161,16 @@ async function buscandoDados() {
       tags[i].style.backgroundColor = "#e67700";
     }
     if (tags[i].textContent === "Javascript") {
-      tags[i].style.backgroundColor = "#fcc419";
+      tags[i].style.backgroundColor = "#d9480f";
     }
     if (tags[i].textContent === "Linux") {
       tags[i].style.backgroundColor = "#9384D1";
     }
     if (tags[i].textContent === "MySQL") {
-      tags[i].style.backgroundColor = "#FFD95A";
+      tags[i].style.backgroundColor = "#2b8a3e";
+    }
+    if (tags[i].textContent === "React") {
+      tags[i].style.backgroundColor = "#0b7285";
     }
 
     // Tipo do dado
