@@ -172,6 +172,9 @@ async function buscandoDados() {
     if (tags[i].textContent === "React") {
       tags[i].style.backgroundColor = "#0b7285";
     }
+    if (tags[i].textContent === "I.A") {
+      tags[i].style.backgroundColor = "#845ef7";
+    }
 
     // Tipo do dado
     if (tags[i].textContent === "Syntaxe") {

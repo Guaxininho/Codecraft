@@ -209,6 +209,7 @@ header .pesquisaBox .pesquisaInput {
   margin-left: 2rem;
   margin-bottom: 1rem;
   line-height: 2.5rem;
+  white-space: pre-wrap;
 }
 .card .flexlinks {
   display: flex;
